@@ -16429,48 +16429,7 @@ INSERT INTO accounts VALUES (4491,'PPL','www.pplweb.com',45.49172048,-122.671879
 INSERT INTO accounts VALUES (4501,'SpartanNash','www.spartannash.com',45.55565141,-122.65714478,'Jewell Likes',321970);
 COMMIT;
 
-
 SELECT channel, account_id, occurred_at
 FROM web_events
 limit 1000;
 
-/* Question: Write a query to return the 10 earliest orders in the orders table. 
-Include the id, occurred_at, and total_amt_usd. */
-
-select id, occurred_at, total_amt_usd
-from orders
-order by occurred_at
-limit 10;
-
-/* Write a query to return the top 5 orders in terms of largest total_amt_usd. 
-Include the id, account_id, and total_amt_usd */
-
-select id, account_id, total_amt_usd
-from orders
-order by total_amt_usd DESC
-limit 5;
-
-/* Write a query to return the lowest 20 orders in terms of smallest total_amt_usd. 
-Include the id, account_id, and total_amt_usd */
-
-select id, account_id, total_amt_usd
-from orders
-order by total_amt_usd 
-limit 20;
-
-
-/* Write a query that displays the order ID, account ID, and total dollar amount for 
-all the orders, sorted first by the account ID (in ascending order), 
-and then by the total dollar amount (in descending order). */
-
-select id, account_id, total_amt_usd
-from orders
-order by account_id, total_amt_usd desc;
-
-/* Now write a query that again displays order ID, account ID, and total dollar amount
-for each order, but this time sorted first by total dollar amount (in descending order), 
-and then by account ID (in ascending order). */
-
-select id, account_id, total_amt_usd
-from orders
-order by total_amt_usd desc, account_id asc;
