@@ -16510,3 +16510,15 @@ from accounts;
 select name, website, primary_poc
 from accounts
 where name = 'Exxon Mobil';
+
+--- ARITHMATIC OPERATORS ---
+
+/* Create a column that divides the standard_amt_usd by the standard_qty to find 
+the unit price for standard paper for each order. 
+Limit the results to the first 10 orders, and include the id and account_id fields. */
+
+select id, 
+	account_id, 
+	standard_amt_usd / standard_qty as unit_price
+from orders
+limit 10;
