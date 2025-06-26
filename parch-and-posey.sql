@@ -16433,6 +16433,8 @@ SELECT channel, account_id, occurred_at
 FROM web_events
 limit 1000;
 
+--- LIMIT AND ORDER BY STATEMENT ---
+
 /* Question: Write a query to return the 10 earliest orders in the orders table. 
 Include the id, occurred_at, and total_amt_usd. */
 
@@ -16472,3 +16474,5 @@ and then by account ID (in ascending order). */
 select id, account_id, total_amt_usd
 from orders
 order by total_amt_usd desc, account_id asc;
+
+--- WHERE STATEMENT ---
