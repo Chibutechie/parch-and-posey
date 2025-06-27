@@ -16566,3 +16566,10 @@ for Walmart, Target, and Nordstrom.*/
 select name, primary_poc, sales_rep_id
 from accounts
 where name in ('Walmart', 'Target', 'Nordstrom');
+
+/* Use the web_events table to find all information regarding individuals who were 
+contacted via the channel of organic or adwords.*/
+
+select *
+from web_events
+where channel in ('organic', 'adwords');
