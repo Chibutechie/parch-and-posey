@@ -16541,24 +16541,24 @@ LIMIT 10;
 
 All the companies whose names start with 'C'.*/
 
-select *
+select name
 from accounts 
 where name like 'C%';
 
 /* All companies whose names end with 's'. */
 
-select *
+select name
 from accounts
 where name like '%s';
 
 /* All companies whose names contain the string 'one' somewhere in the name. */
 
-select *
+select name
 from accounts
 where name like '%one%';
 
 
---- IN STATEMENT ---
+--- IN and NOT STATEMENT ---
 
 /* Use the accounts table to find the account name, primary_poc, and sales_rep_id 
 for Walmart, Target, and Nordstrom.*/
@@ -16573,3 +16573,32 @@ contacted via the channel of organic or adwords.*/
 select *
 from web_events
 where channel in ('organic', 'adwords');
+
+
+/* Use the accounts table to find the account name, primary poc, and sales rep id 
+for all stores except Walmart, Target, and Nordstrom.*/
+
+select name, primary_poc, sales_rep_id
+from accounts
+where name NOT in ('Walmart', 'Target', 'Nordstrom');
+
+/* Use the web_events table to find all information regarding individuals who were 
+contacted via any method except using organic or adwords methods.*/
+
+select *
+from web_events 
+where channel not in ('organic', 'adwords');
+
+/* Use the accounts table to find:
+
+All the companies whose names do not start with 'C'.
+
+All companies whose names do not contain the string 'one' somewhere in the name.
+
+All companies whose names do not end with 's'.*/
+
+select name
+from accounts
+where name not like 'C%';
+
+select name
