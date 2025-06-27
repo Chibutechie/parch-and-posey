@@ -16559,3 +16559,10 @@ where name like '%one%';
 
 
 --- IN STATEMENT ---
+
+/* Use the accounts table to find the account name, primary_poc, and sales_rep_id 
+for Walmart, Target, and Nordstrom.*/
+
+select name, primary_poc, sales_rep_id
+from accounts
+where name in ('Walmart', 'Target', 'Nordstrom');
