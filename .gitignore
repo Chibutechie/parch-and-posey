@@ -1,0 +1,17 @@
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore database dumps or large data files (optional)
+*.bak
+*.sql~
+
+# Ignore environment files
+.env
