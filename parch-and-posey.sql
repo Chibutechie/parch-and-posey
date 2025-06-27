@@ -16544,3 +16544,9 @@ All the companies whose names start with 'C'.*/
 select *
 from accounts 
 where name like 'C%';
+
+/* All companies whose names end with 's'. */
+
+select *
+from accounts
+where name like '%s';
