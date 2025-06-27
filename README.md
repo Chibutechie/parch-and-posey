@@ -9,6 +9,3 @@ This project contains SQL scripts and queries for analyzing paper orders from th
 
 ## Folder Structure
 - `parch_and_posey` – contains all query scripts
-
-## Getting Started
-Run the SQL scripts in your preferred PostgreSQL client (e.g., PgAdmin or DBeaver).
