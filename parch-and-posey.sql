@@ -16536,6 +16536,11 @@ FROM orders
 LIMIT 10;
 
 ---- LIKE STATEMENT ----
-select * 
-from accounts
-where name like 'Apple';
+
+/*  Use the accounts table to find
+
+All the companies whose names start with 'C'.*/
+
+select *
+from accounts 
+where name like 'C%';
