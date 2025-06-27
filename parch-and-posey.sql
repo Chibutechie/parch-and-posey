@@ -16550,3 +16550,9 @@ where name like 'C%';
 select *
 from accounts
 where name like '%s';
+
+/* All companies whose names contain the string 'one' somewhere in the name. */
+
+select *
+from accounts
+where name like '%one%';
