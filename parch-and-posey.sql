@@ -16556,3 +16556,6 @@ where name like '%s';
 select *
 from accounts
 where name like '%one%';
+
+
+--- IN STATEMENT ---
