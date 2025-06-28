@@ -16617,3 +16617,33 @@ the poster_qty is 0, and the gloss_qty is 0. */
 select *
 from orders
 where standard_qty > 1000 and poster_qty = 0 and gloss_qty = 0;
+
+/* Using the accounts table, find all the companies whose names do not start with 'C' 
+and end with 's'. */
+
+select name
+from accounts 
+where name not like 'C%' and name like '%s';
+
+/* Using the accounts table, find all the companies whose names do not start with 'A' 
+and end with '0'. */
+
+select name
+from accounts
+where name not like 'A%' and name like '%o';
+
+/* write a query that displays the order date and gloss_qty data for all orders where 
+gloss_qty is between 24 and 29. */
+
+select occurred_at, gloss_qty
+from orders 
+where gloss_qty between 24 and 29;
+
+/* Use the web_events table to find all information regarding individuals who were 
+contacted via the organic or adwords channels, and started their account at any 
+point in 2016, sorted from newest to oldest.*/
+
+select *
+from web_events
+where channel in ('organic', 'adwords') and occurred_at between '2016-01-01' and '2017-01-01'
+order by occurred_at desc;
