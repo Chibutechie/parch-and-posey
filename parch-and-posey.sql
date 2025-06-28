@@ -16647,3 +16647,10 @@ select *
 from web_events
 where channel in ('organic', 'adwords') and occurred_at between '2016-01-01' and '2017-01-01'
 order by occurred_at desc;
+
+SELECT *
+FROM web_events
+where channel = 'organic' or channel = 'direct'
+order by occurred_at desc;
+
+--- OR STATEMENT --- 
