@@ -16602,3 +16602,18 @@ from accounts
 where name not like 'C%';
 
 select name
+from accounts 
+where name not like '%one%';
+
+select name 
+from accounts
+where  name not like '%s';
+
+--- AND AND BETWEEN STATEMENTS ---
+
+/* Write a query that returns all the orders where the standard_qty is over 1000, 
+the poster_qty is 0, and the gloss_qty is 0. */
+
+select *
+from orders
+where standard_qty > 1000 and poster_qty = 0 and gloss_qty = 0;
