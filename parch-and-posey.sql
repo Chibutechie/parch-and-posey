@@ -16678,3 +16678,5 @@ where (name like 'C%' or name like 'W%')
 				and ((primary_poc like '%ana%' or primary_poc like '%Ana%')
 				and primary_poc not like '%eana%')
 
+--- JOIN ---
+
