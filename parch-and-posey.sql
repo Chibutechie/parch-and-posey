@@ -16705,3 +16705,72 @@ select orders.standard_qty, orders.gloss_qty,
 from orders
 join accounts
 on orders.account_id = accounts.id;
+
+select a.name as company_name, o.total_amt_usd as total
+from accounts a
+join orders o
+on o.account_id = a.id;
+
+select *
+from region;
+
+/* Provide a table that provides the region for each sales_rep along with their 
+associated accounts. Your final table should include three columns: the region name, 
+the sales rep name, and the account name. 
+Sort the accounts alphabetically (A-Z) according to account name.*/
+
+SELECT r.name region, s.name rep, a.name account
+FROM sales_reps s
+JOIN region r
+ON s.region_id = r.id
+join accounts a
+on a.sales_rep_id = s.id
+order by a.name;
+
+
+select a.primary_poc, w.occurred_at, w.channel, a.name
+from web_events w
+join accounts a
+on w.account_id = a.id;
+
+select *
+from web_events;
+
+select orders.account_id, primary_poc, web_events.occurred_at, total_amt_usd, region_id, sales_reps.name
+from orders 
+join accounts 
+on orders.account_id = accounts.id
+join web_events
+on orders.id = web_events.id
+join sales_reps
+on sales_reps.region_id = orders.id;
+
+select o.account_id, a.name, s.id, r.name
+from orders o
+join accounts a
+on o.account_id = a.id
+join sales_reps s
+on s.id = a.sales_rep_id
+join region r
+on r.id = s.region_id;
+
+
+SELECT o.account_id, a.name, s.id, r.name
+FROM orders o
+JOIN accounts a ON o.account_id = a.id
+JOIN sales_reps s ON s.id = a.sales_rep_id  -- assuming accounts are assigned to sales reps
+JOIN region r ON r.id = s.region_id;       -- assuming sales reps belong to regions
+
+/* Provide a table for all the for all web_events associated with account name of Walmart. 
+There should be three columns. Be sure to include the primary_poc, time of the event, 
+and the channel for each event. Additionally, you might choose to add a fourth column 
+to assure only Walmart events were chosen.*/
+
+select a.primary_poc, w.occurred_at, w.channel, a.name
+from web_events w
+join accounts a
+on a.id = w.account_id
+where a.name = 'Walmart';
+
+select *
+from web_events;
