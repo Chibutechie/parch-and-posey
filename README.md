@@ -31,9 +31,9 @@ In this project, I leverage the Parch & Posey dataset to answer critical busines
 3. Explore the queries in the `parch_and_posey/` directory
 4. Run and modify queries to gain insights
 
-## 🔍 Key Analysis Areas
+## Key Analysis Areas
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - SQL (Structured Query Language)
 - PgAdmin
