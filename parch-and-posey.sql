@@ -27,7 +27,6 @@ join region r
 on s.region_id = r.id;
 
 -- Find the number of customers in each region.
--- there's no direct relationship between accounts and regions, so I connected to the sales_rep table
 select r.name as region, count (a.name) as customers_count
 from accounts a
 left join sales_reps s
